@@ -2,6 +2,7 @@ import { Carousel, Typography, Button } from "@material-tailwind/react";
 import SampleOne from "../assets/img/sample1.jpg";
 import SampleTwo from "../assets/img/sample2.jpg";
 import SampleThree from "../assets/img/sample3.jpg";
+import { Link } from "react-router-dom";
 
 export function Slider() {
   return (
@@ -39,7 +40,9 @@ export function Slider() {
             </Typography>
             <div className="flex gap-2">
               <Button size="lg" color="white">
-                Shop now
+                <Link to="/shop" className="flex items-center">
+                  SHOP NOW
+                </Link>
               </Button>
             </div>
           </div>
@@ -72,7 +75,9 @@ export function Slider() {
             </Typography>
             <div className="flex gap-2">
               <Button size="lg" color="white">
-                Shop now
+                <Link to="/shop" className="flex items-center">
+                  SHOP NOW
+                </Link>
               </Button>
             </div>
           </div>
@@ -105,7 +110,9 @@ export function Slider() {
             </Typography>
             <div className="flex gap-2">
               <Button size="lg" color="white">
-                Explore
+                <Link to="/shop" className="flex items-center">
+                  Explore
+                </Link>
               </Button>
             </div>
           </div>

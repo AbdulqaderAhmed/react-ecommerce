@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { NavBar } from "./include/header/NavBar";
 import Home from "./pages/Home";
 import { Footer } from "./include/footer/Footer";
+import Shop from "./pages/Shop";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
         </Routes>
       </main>
       <Footer />

@@ -7,6 +7,7 @@ import {
   Collapse,
 } from "@material-tailwind/react";
 import { BsCart } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 export function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -26,9 +27,9 @@ export function NavBar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link to="/" className="flex items-center">
           Home
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -36,9 +37,9 @@ export function NavBar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link to="/shop" className="flex items-center">
           Shop
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -71,7 +72,9 @@ export function NavBar() {
           href="#"
           className="text-2xl mr-4 cursor-pointer py-1.5 font-bold"
         >
-          Shemach
+          <Link to="/" className="flex items-center">
+            Shemach
+          </Link>
         </Typography>
         <div className="mr-4 hidden lg:block">{navList}</div>
         <div className="flex items-center gap-4">

@@ -26,7 +26,10 @@ export default function Home() {
       </div>
 
       <div className="my-10 flex justify-center items-center">
-        <Link className="bg-black text-white p-3 shadow-lg rounded-lg font-bold up">
+        <Link
+          to="/shop"
+          className="bg-black text-white p-3 shadow-lg rounded-lg font-bold up"
+        >
           Show more...
         </Link>
       </div>

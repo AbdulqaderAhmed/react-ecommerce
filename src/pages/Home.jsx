@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { ItemCard } from "../components/ItemCard";
 import { Slider } from "../components/Slider";
 import { Typography } from "@material-tailwind/react";
+import Sponser from "../components/Sponser";
+import { NewLetter } from "../components/NewLetter";
 
 export default function Home() {
   return (
@@ -14,13 +16,9 @@ export default function Home() {
         fontWeight="regular"
         className="text-center mt-10"
       >
-        Browse our collection
+        Our New Arrivals
       </Typography>
-      <div className="grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 text-center gap-4 lg:gap-y-10 my-5 mx-3">
-        <ItemCard />
-        <ItemCard />
-        <ItemCard />
-        <ItemCard />
+      <div className="grid grid-flow-row md:grid-cols-2 lg:grid-cols-4 text-center gap-4 my-5 mx-3">
         <ItemCard />
         <ItemCard />
         <ItemCard />
@@ -32,6 +30,10 @@ export default function Home() {
           Show more...
         </Link>
       </div>
+
+      <Sponser />
+
+      <NewLetter />
     </div>
   );
 }

@@ -9,7 +9,7 @@ import {
 import { BsCart } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-export function NavBar() {
+export function NavBar({ openDrawer, handleOpen }) {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -80,10 +80,10 @@ export function NavBar() {
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-x-4">
             <div className="flex">
-              <a href="#">
+              <a onClick={openDrawer} href="#">
                 <BsCart className="text-2xl fill-current" />
               </a>
-              <span className="bg-red-500 text-white text-sm rounded-full w-4 h-5 text-center relative -top-2 -left-3">
+              <span className="bg-red-500 text-white font-semibold text-sm rounded-full w-5 h-5 text-center relative -top-2 -left-3">
                 0
               </span>
             </div>
@@ -91,6 +91,7 @@ export function NavBar() {
               variant="gradient"
               size="sm"
               className="hidden lg:inline-block"
+              onClick={handleOpen}
             >
               <span>Login in</span>
             </Button>

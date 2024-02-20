@@ -57,6 +57,7 @@ export function ItemCard() {
         </Button>
       </CardFooter>
       <Dialog
+        size="lg"
         open={open}
         handler={handleOpen}
         className="grid sm:grid-flow-col sm:grid-cols-2 lg:grid-flow-row lg:grid-cols-2 gap-4 p-4"

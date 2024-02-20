@@ -9,6 +9,7 @@ import {
 } from "@material-tailwind/react";
 import { useState } from "react";
 import { ItemCard } from "../components/ItemCard";
+import { Pagination } from "../components/Pagination";
 
 export default function Shop() {
   const [search, setSearch] = useState("");
@@ -17,7 +18,7 @@ export default function Shop() {
     <div className="container mx-auto py-10 grid grid-flow-row lg:grid-cols-3">
       <div className="flex flex-col w-6/6 p-5">
         {/* search */}
-        <div className="relative flex w-full max-w-[24rem]">
+        <div className="relative flex w-full max-w-[24rem] gap-y-8 mb-8">
           <Input
             type="text"
             label="Search Product"
@@ -43,7 +44,7 @@ export default function Shop() {
           <Card className="w-96">
             <List>
               <ListItem>
-                Cloth
+                Clothes
                 <ListItemSuffix>
                   <Chip
                     value="14"
@@ -103,9 +104,16 @@ export default function Shop() {
       </div>
 
       {/* products */}
-      <div className=" col-span-2">
-        <ItemCard />
-        <ItemCard />
+      <div className="flex flex-col gap-y-5 md:col-span-1 lg:col-span-2">
+        <div className="grid grid-flow-row lg:grid-cols-2 gap-y-5">
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+        </div>
+        <div className="mx-auto">
+          <Pagination />
+        </div>
       </div>
     </div>
   );

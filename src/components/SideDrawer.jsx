@@ -7,7 +7,13 @@ import {
 
 export default function SideDrawer({ closeDrawer, open }) {
   return (
-    <Drawer open={open} onClose={closeDrawer} placement="right" className="p-4">
+    <Drawer
+      open={open}
+      onClose={closeDrawer}
+      placement="right"
+      size={350}
+      className="p-4"
+    >
       <div className="mb-6 flex items-center justify-between">
         <Typography variant="h5" color="blue-gray">
           Your Cart list
@@ -29,10 +35,36 @@ export default function SideDrawer({ closeDrawer, open }) {
           </svg>
         </IconButton>
       </div>
-      <Typography color="gray" className="mb-8 pr-4 font-normal">
-        Material Tailwind features multiple React and HTML components, all
-        written with Tailwind CSS classes and Material Design guidelines.
-      </Typography>
+      <div className="flex  flex-wrap gap-x-10 mb-6 text-sm font-medium">
+        <Typography>1)</Typography>
+        <Typography>Sample bag</Typography>
+        <input
+          type="number"
+          min={1}
+          defaultValue={1}
+          className="border-2 w-10"
+        />
+      </div>
+      <div className="flex  flex-wrap gap-x-10 mb-6 text-sm font-medium">
+        <Typography>2)</Typography>
+        <Typography>Sample Hat</Typography>
+        <input
+          type="number"
+          min={1}
+          defaultValue={1}
+          className="border-2 w-10"
+        />
+      </div>
+      <div className="flex  flex-wrap gap-x-10 mb-6 text-sm font-medium">
+        <Typography>3)</Typography>
+        <Typography>Sample Cloth</Typography>
+        <input
+          type="number"
+          min={1}
+          defaultValue={1}
+          className="border-2 w-10"
+        />
+      </div>
       <div className="flex gap-2">
         <Button size="sm" variant="outlined">
           Documentation

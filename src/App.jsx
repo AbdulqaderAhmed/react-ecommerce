@@ -5,25 +5,25 @@ import { Footer } from "./include/footer/Footer";
 import Shop from "./pages/Shop";
 import { useState } from "react";
 import SideDrawer from "./components/SideDrawer";
-import SignInLogin from "./components/SignInLogin";
+import { Login } from "./components/auth/Login";
+import { Register } from "./components/auth/Register";
 
 export default function App() {
   const [open, setOpen] = useState(false);
-  const [openDialog, setOpenDialog] = useState(false);
 
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
 
-  const handleOpen = () => setOpenDialog(!openDialog);
   return (
     <div>
-      <NavBar openDrawer={openDrawer} handleOpen={handleOpen} />
+      <NavBar openDrawer={openDrawer} />
       <SideDrawer closeDrawer={closeDrawer} open={open} />
-      <SignInLogin openDialog={openDialog} handleOpen={handleOpen} />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </main>
       <Footer />

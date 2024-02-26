@@ -11,7 +11,7 @@ export default function SideDrawer({ closeDrawer, open }) {
       open={open}
       onClose={closeDrawer}
       placement="right"
-      size={350}
+      size={360}
       className="p-4"
     >
       <div className="mb-6 flex items-center justify-between">
@@ -35,41 +35,68 @@ export default function SideDrawer({ closeDrawer, open }) {
           </svg>
         </IconButton>
       </div>
-      <div className="flex  flex-wrap gap-x-10 mb-6 text-sm font-medium">
-        <Typography>1)</Typography>
-        <Typography>Sample bag</Typography>
+      <div className="flex  flex-wrap gap-x-5 mb-6 text-sm font-medium">
+        <div className="flex gap-2">
+          <Typography>1)</Typography>
+          <Typography>Sample Cloth</Typography>
+        </div>
+        <Typography>x</Typography>
         <input
           type="number"
           min={1}
           defaultValue={1}
-          className="border-2 w-10"
+          className="border-2 w-10 text-center"
         />
+        <div className="flex gap-2">
+          <Typography>=</Typography>
+          <Typography>100 BR</Typography>
+        </div>
       </div>
-      <div className="flex  flex-wrap gap-x-10 mb-6 text-sm font-medium">
-        <Typography>2)</Typography>
-        <Typography>Sample Hat</Typography>
+      <div className="flex  flex-wrap gap-x-5 mb-6 text-sm font-medium">
+        <div className="flex gap-2">
+          <Typography>2)</Typography>
+          <Typography>Sample Cloth</Typography>
+        </div>
+        <Typography>x</Typography>
         <input
           type="number"
           min={1}
           defaultValue={1}
-          className="border-2 w-10"
+          className="border-2 w-10 text-center"
         />
+        <div className="flex gap-2">
+          <Typography>=</Typography>
+          <Typography>100 BR</Typography>
+        </div>
       </div>
-      <div className="flex  flex-wrap gap-x-10 mb-6 text-sm font-medium">
-        <Typography>3)</Typography>
-        <Typography>Sample Cloth</Typography>
+      <div className="flex  flex-wrap gap-x-5 mb-6 text-sm font-medium">
+        <div className="flex gap-2">
+          <Typography>3)</Typography>
+          <Typography>Sample Cloth</Typography>
+        </div>
+        <Typography>x</Typography>
         <input
           type="number"
           min={1}
           defaultValue={1}
-          className="border-2 w-10"
+          className="border-2 w-10 text-center"
         />
+        <div className="flex gap-2">
+          <Typography>=</Typography>
+          <Typography>100 BR</Typography>
+        </div>
       </div>
-      <div className="flex gap-2">
-        <Button size="sm" variant="outlined">
-          Documentation
-        </Button>
-        <Button size="sm">Get Started</Button>
+      <div className="flex flex-col gap-2">
+        <div className="flex gap-4 justify-end">
+          <Typography variant="h4">Total: </Typography>
+          <Typography variant="h4">300 BR</Typography>
+        </div>
+        <div className="flex gap-2 justify-center">
+          <Button size="sm" variant="outlined">
+            Update
+          </Button>
+          <Button size="sm">Checkout</Button>
+        </div>
       </div>
     </Drawer>
   );
